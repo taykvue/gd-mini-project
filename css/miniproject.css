@@ -1,0 +1,120 @@
+.book_outline {
+    background: #F9F5EF; 
+    border: 3px solid black;
+    width: 400px;
+    height: 600px;
+    /* centering item book_outline */
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@font-face {
+    font-family: 'Ques';
+    src:url(../fonts/Questrial-Regular.ttf) format('truetype');
+}
+
+/* add hover on black part, add illustration of colors */
+@keyframes rotate-base{
+	0% 		{ transform: rotate(0deg); }
+	100% 	{ transform: rotate(360deg); }
+}
+.base {
+    position: absolute;
+    left: 180px;
+    top: 405px;
+    animation: rotate-base 8s infinite linear;
+}
+
+.font {
+    font-family: 'Ques';
+    float: left;
+    color: #171714;
+}
+
+.title {
+    font-size: 80px;
+    margin-left: 14%;
+    letter-spacing: 3px;
+    margin-top: 75px;
+}
+
+.com-1 {
+    font-size: 17px;
+    margin-left: 16%;
+    margin-bottom: 95px;
+}
+
+.com-2 {
+    font-size: 17px;
+    margin-left: 30%;
+    margin-bottom: 65px;
+}
+
+.author {
+    font-size: 43px;
+    margin-left: 22%;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 100%;
+}
+    /* black: 171714 */
+@keyframes blue-move {
+    0% {background: #171714; left: 180px; top: 405px;}
+    35% {opacity: 0.5; background: #00C3FF; left: 180px; top: 320px;}
+    55% {background: #00C3FF; left: 200px; top: 190px;}
+    90% {background: #00C3FF; left: 380px; top: 20px;}
+    100% {background: #00C3FF; left: 580px; top: 20px;}
+}
+    /* 00C3FF */
+.blue {
+    background: #00C3FF;
+    opacity: 1;
+    position: relative;
+    /* opacity: .5;
+    left: 180px;
+    top: 320px; */
+    animation: blue-move 5s forwards linear infinite; 
+}
+
+@keyframes purple-move {
+    0% {background: #171714; left: 180px; top: 405px;}
+    35% {opacity: 0.5; background: #FF71FF; left: 200px; top: 300px;}
+    70% {background: #FF71FF; left: 240px; top: 135px;}
+    100% {background: #FF71FF; left: 370px; top: -100px;}
+}
+    /* FF71FF */
+.purple {
+    background: #FF71FF;
+    opacity: 1;
+    /* opacity: .5;
+    left: 200px;
+    top: 300px; */
+    animation: purple-move 5s forwards linear infinite;
+}
+
+@keyframes yellow-move{
+    0% {background: #171714; left: 170px; top: 405px;}
+    35% {opacity: 0.5; background: #FFD700; left: 170px; top: 293px;}
+    70% {background: #FFD700; left: 105px; top: 155px;}
+    100% {background: #FFD700; left: -20px; top: -20px;}
+}
+    /* FFD700 */
+.yellow {
+    background: #FFD700;
+    opacity: 1;
+    /* opacity: .5;
+    left: -20px;
+    top: -20px; */
+    animation: yellow-move 5s forwards linear infinite;
+}
+
+.title:hover {
+    animation: rotate-base 3s infinite;
+}
